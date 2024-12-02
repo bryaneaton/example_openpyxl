@@ -29,7 +29,7 @@ def create_cities_worksheet():
     ]
 
     # Write headers
-    for col, header in enumerate(headers, 1):
+    for col, header in enumerate(headers, 1): # start counting at 1 instead of the default, 0
         cell = ws.cell(row=1, column=col)
         cell.value = header
         # Set cell formatting
@@ -39,7 +39,7 @@ def create_cities_worksheet():
 
     # Write data and formulas
     tokyo_population = data[0][3]  # Store Tokyo's population for percentage calculation
-    for row, city_data in enumerate(data, 2):
+    for row, city_data in enumerate(data, 2): # start counting at 2 instead of the default, 0
         for col, value in enumerate(city_data, 1):
             cell = ws.cell(row=row, column=col)
             cell.value = value
